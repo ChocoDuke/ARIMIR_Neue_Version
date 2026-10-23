@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#30204f">
+  <title>ARIMIR — учимся понимать время</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-star">✦</span><span>ARIMIR</span></div>
+      <button id="homeBtn" class="small-button" aria-label="На главный экран">⌂ <span>Домой</span></button>
+    </header>
+
+    <section id="homeScreen" class="screen active">
+      <div class="welcome">
+        <div class="reya-avaid">
+          <img
+                  id="reyaWelcome"
+                  src="assets/images/reya.jpg"
+                  alt="Рэйя"
+                  title="Послушать приветствие"
+                  style="cursor: pointer;"
+          >
+        </div>
+      </div>
+      <div class="home-cards">
+        <button id="openDay" class="home-card sun-card">
+          <span class="card-illustration" aria-hidden="true">☀️</span>
+          <span class="card-copy"><strong>Мой день</strong><small>Учимся понимать время</small></span>
+          <span class="arrow">›</span>
+        </button>
+        <button id="openBirthday" class="home-card cake-card">
+          <span class="card-illustration" aria-hidden="true">🎂</span>
+          <span class="card-copy"><strong>Мой день рождения</strong><small>Считаем, сколько осталось спать</small></span>
+          <span class="arrow">›</span>
+        </button>
+      </div>
+      <p id="audioNotice" class="notice" role="status"></p>
+    </section>
+
+    <section id="dayScreen" class="screen">
+      <div class="section-heading"><span class="heading-icon">☀️</span><div><p class="eyebrow">УЧИМСЯ ВМЕСТЕ</p><h1>Мой день</h1></div></div>
+      <div class="lesson-progress" aria-label="Ход занятия"><span id="progressFill"></span></div>
+      <div class="lesson-panel">
+        <div id="lessonPicture" class="lesson-picture" aria-hidden="true">🌅</div>
+        <div class="lesson-content">
+          <div class="speech lesson-speech"><p id="lessonCaption">Посмотрим, что мы делаем утром.</p><button id="repeatLesson" class="round-repeat" aria-label="Повторить">🔊</button></div>
+          <div id="lessonChoices" class="choices"></div>
+        </div>
+      </div>
+      <div class="lesson-footer"><button id="backHomeFromDay" class="secondary-button">На главный экран</button></div>
+    </section>
+
+    <section id="birthdayScreen" class="screen">
+      <div class="section-heading"><span class="heading-icon">🎂</span><div><p class="eyebrow">ПРАЗДНИК ПРИБЛИЖАЕТСЯ</p><h1>Мой день рождения</h1></div></div>
+      <div class="birthday-scene">
+        <div class="birthday-message">
+          <div class="birthday-count"><span id="sleepCount">74</span><small>раза поспать</small></div>
+          <p id="birthdayCaption">До дня рождения осталось поспать 74 раза!</p>
+          <div class="birthday-actions"><button id="repeatBirthday" class="primary-button">🔊 Послушать ещё раз</button><button id="birthdayHome" class="secondary-button">На главный экран</button></div>
+        </div>
+        <div id="garland" class="garland" aria-label="Праздничные шарики"></div>
+      </div>
+      <p id="birthdayStatus" class="status-line" role="status"></p>
+    </section>
+
+    <footer class="footer"><span>ARIMIR</span><span>Учимся шаг за шагом 💜</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
